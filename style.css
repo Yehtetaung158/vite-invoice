@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Padauk:wght@400;700&family=Rubik:wght@400;500;600&display=swap');
+
+@import url("./node_modules/sweetalert2/dist/sweetalert2.css");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    counter-reset: recordIndex;
+}
+
+.td-counter::before{
+    counter-increment: recordIndex;
+    content: counter(recordIndex);
+}
+
+.swal2-confirm{
+    @apply bg-blue-900 !important;
+}
+
+.swal2-cancel{
+    @apply bg-blue-100 text-blue-700 !important;
+
+}
